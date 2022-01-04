@@ -1,25 +1,25 @@
-const http = require('http');
-const data= require('./data.js');
-const { json } = require('stream/consumers');
-http.createServer((req, rep) => {
-    rep.writeHead(200,{'content-type':'application/json'});
-    rep.write(JSON.stringify(data));
-    rep.end();
+// const http = require('http');
+// const data= require('./data.js');
+// const { json } = require('stream/consumers');
+// http.createServer((req, rep) => {
+//     rep.writeHead(200,{'content-type':'application/json'});
+//     rep.write(JSON.stringify(data));
+//     rep.end();
 
-}).listen(8080);
+// }).listen(8080);
 
 
-const fs = require('fs');
+// const fs = require('fs');
 
-const input = process.argv;
-if(input[2]=='add'){
-    fs.writeFileSync(input[3],input[4]);
-}
-else if(input[2]=='remove'){
-    fs.unlinkSync(input[3]);
-}
-else
-    console.log("Invalid output");
+// const input = process.argv;
+// if(input[2]=='add'){
+//     fs.writeFileSync(input[3],input[4]);
+// }
+// else if(input[2]=='remove'){
+//     fs.unlinkSync(input[3]);
+// }
+// else
+//     console.log("Invalid output");
 
 
 // const dataSet = require('./data.js');
@@ -31,3 +31,16 @@ else
 
 // }).listen(3000);
 
+// console.log(process.argv[2]);
+
+  const fs=require('fs');
+  const input=process.argv;
+  if(input[2]=='add'){
+    fs.writeFileSync(input[3],input[4]);
+  }
+  else if(input[2]=='remove'){
+    fs.unlinkSync(input[3]);
+  }
+  else{
+    console.warn("Wrong input");
+  }
