@@ -1,5 +1,5 @@
 {
-  "name": "code",
+  "name": "c",
   "version": "1.0.0",
   "description": "Package of code",
   "main": "index.js",
@@ -12,5 +12,6 @@
     "calk": "^0.0.1-security",
     "chalk": "^5.3.0",
     "colors": "^1.4.0"
-  }
+  },
+  "devDependencies": {}
 }
